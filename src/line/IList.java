@@ -1,7 +1,10 @@
 package line;
 
 /**
- * Created by Administrator on 2015/6/29.
+ * Created by HanSon on 2015/6/29.
+ * GitHub: http://github.com/hanccc
+ * Blog: http://hanc.cc
+ * Resume: http://hanccc.github.io
  */
 public interface IList {
     public void clear();
