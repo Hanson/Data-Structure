@@ -13,6 +13,9 @@ public class Main {
         removeRepeatElem(l);
         System.out.println("删除重复结点后单链表中的各个结点值为：");
         l.display();
+
+        l.insert1(0, 99);
+        l.display();
     }
 
     public static void removeRepeatElem(LinkList l) throws Exception{

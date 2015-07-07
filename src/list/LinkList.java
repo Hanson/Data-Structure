@@ -85,7 +85,7 @@ public class LinkList implements IList {
     public void insert(int i, Object x) throws Exception {
         Node p =head;
         int j = -1;
-        while (p != null && j < i - 1){
+        while (p != null && j < i - 1){             //取出结点 p ，位于 i - 1 的位置上
             p = p.getNext();
             ++j;
         }

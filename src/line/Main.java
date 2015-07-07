@@ -10,7 +10,7 @@ import java.util.Scanner;
  */
 public class Main {
 
-    public static void main(String[] args) throws Exception{
+    public static void main1(String[] args) throws Exception{
 
         int n = 10;
         SqList l = new SqList(80);
