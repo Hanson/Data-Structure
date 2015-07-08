@@ -7,4 +7,13 @@ package Stack.StackList;
  * Resume: http://hanccc.github.io
  */
 public class Main {
+    public static void main(String[] args) throws Exception {
+        LinkStack linkStack = new LinkStack();
+        linkStack.push(5);
+        linkStack.push(3);
+        linkStack.display();
+        System.out.println(linkStack.peek());
+        linkStack.pop();
+        linkStack.display();
+    }
 }
