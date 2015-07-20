@@ -1,4 +1,4 @@
-package String;
+package SqString;
 
 /**
  * Created by HanSon on 2015/7/11.
