@@ -33,7 +33,11 @@ public class BiTree {
 
     //先根遍历二叉树基本操作的递归算法
     public void preRootTraverse(BiTreeNode T){
-
+        if (T != null){
+            System.out.println(T.getData());
+            preRootTraverse(T.getLchild());
+            preRootTraverse(T.getRchild());
+        }
     }
 
     //中根遍历二叉树基本操作的非递归算法
