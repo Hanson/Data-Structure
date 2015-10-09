@@ -47,9 +47,11 @@ public class DebugBiTree {
         biTree.postRootTraverse();
         System.out.println();
 
+        //先根遍历查找G
         BiTreeNode result = searchNode(root, 'G');
         System.out.println(result.getData());
 
+        //计算二叉树中结点个数
         System.out.println(countNode(root));
 
     }
