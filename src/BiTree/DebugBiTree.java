@@ -47,7 +47,7 @@ public class DebugBiTree {
         biTree.postRootTraverse();
         System.out.println();
 
-        //先根遍历查找G
+        //先根遍历查找结点G
         BiTreeNode result = searchNode(root, 'G');
         System.out.println(result.getData());
 
