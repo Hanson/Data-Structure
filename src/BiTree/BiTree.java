@@ -21,8 +21,17 @@ public class BiTree {
         this.root = root;
     }
 
+    //先根遍历&中根遍历确定树
     public BiTree(String preOrder, String inOrder, int preIndex, int inIndex, int count){
-
+        if (count > 0){
+            char r = preOrder.charAt(preIndex);
+            int i = 0;
+            for (;i < count;i++)
+                if (r == inOrder.charAt(i + inIndex))
+                    break;
+            root = new BiTreeNode(r);
+            root.setLchild(new BiTree(preOrder, inOrder, preIndex + i + 1, inIndex + i + 1, count - i - 1).root);
+        }
     }
 
     public BiTree(String preStr){
