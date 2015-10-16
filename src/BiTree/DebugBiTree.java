@@ -8,6 +8,8 @@ package BiTree;
  */
 public class DebugBiTree {
 
+    private int index = 0;
+
     //创建二叉树
     public BiTree createBiTree(){
         BiTreeNode d = new BiTreeNode('D');
@@ -54,6 +56,26 @@ public class DebugBiTree {
         //计算二叉树中结点个数
         System.out.println(countNode(root));
 
+        //先跟、中根遍历确定树，输出后根遍历
+        String preOrder = "ABDEGCFH";
+        String inOrder  = "DBGEAFHC";
+        BiTree T = new BiTree(preOrder, inOrder, 0 ,0, preOrder.length());
+        System.out.println("后根遍历：");
+        T.postRootTraverse();
+        System.out.println();
+
+        String preStr = "AB##CD###";
+        T = new BiTree(preStr);
+        System.out.println("先根遍历:");
+        T.preRootTraverse();
+        System.out.println();
+        System.out.println("中根遍历:");
+        T.inRootTraverse();
+        System.out.println();
+        System.out.println("后根遍历:");
+        T.postRootTraverse();
+        System.out.println();
+
     }
 
     //二叉树先根遍历查找
@@ -79,7 +101,6 @@ public class DebugBiTree {
         }
         return count;
     }
-
 
 
 }

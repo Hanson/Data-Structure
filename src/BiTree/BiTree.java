@@ -30,12 +30,20 @@ public class BiTree {
                 if (r == inOrder.charAt(i + inIndex))
                     break;
             root = new BiTreeNode(r);
-            root.setLchild(new BiTree(preOrder, inOrder, preIndex + i + 1, inIndex + i + 1, count - i - 1).root);
+            root.setLchild(new BiTree(preOrder, inOrder, preIndex + 1, inIndex, i).root);
+            root.setRchild(new BiTree(preOrder, inOrder, preIndex + i + 1, inIndex + i + 1, count - i - 1).root);
         }
     }
 
+    //由标明空子树的先根遍历建立一棵二叉树，并返回根节点
     public BiTree(String preStr){
-
+        char c = preStr.charAt(index++);
+        if (c != '#'){
+            root = new BiTreeNode(c);
+            root.setLchild(new BiTree(preStr).root);
+            root.setRchild(new BiTree(preStr).root);
+        }else
+            root = null;
     }
 
     //先根遍历二叉树基本操作的非递归算法
